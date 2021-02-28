@@ -11,11 +11,9 @@ public class Main {
         Book harryPotter = new Book("Гарри Поттер gold edition", "Joanne Rowling", 8, 1000);
         Book atTheBottom = new Book("Максим Горький");
 
+        Book[] booksInLibrary = {warAndPeace, crimeAndPunishment, harryPotter, atTheBottom};
 
-        //Собираем книги в один массив
-        Book[] booksInLibrary = {warAndPeace,crimeAndPunishment,harryPotter,atTheBottom};
         Reader reader = new Reader();
-
         Book randomBook = reader.choiceBook(booksInLibrary);
         System.out.println("Из всех имеющихся книг:\n" + Arrays.toString(booksInLibrary) + "\n");
         reader.readBook(randomBook);

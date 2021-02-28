@@ -15,7 +15,6 @@ public class Reader {
         System.out.println(randomBook.toString());
     }
 
-
     public int getRating(Book randomBook) {
         int rating;
         int ratingName;
@@ -25,11 +24,11 @@ public class Reader {
 
         if (randomBook.name.equals("default")) {
             ratingName = random.nextInt(10);
-        } else ratingName = randomBook.name.length();
+        } else ratingName = randomBook.name.replaceAll(" ", "").length();
 
         if (randomBook.author.equals("default")) {
             ratingAuthor = random.nextInt(10);
-        } else ratingAuthor = randomBook.author.length();
+        } else ratingAuthor = randomBook.author.replaceAll(" ", "").length();
 
         if (randomBook.seriesISBN == 0) {
             ratingSeriesISBN = random.nextInt(10);
